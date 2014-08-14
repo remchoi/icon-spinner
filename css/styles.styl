@@ -1,0 +1,130 @@
+@import 'nib'
+
+body,
+html,
+.wrapper
+	height 100%
+
+.wrapper
+	position relative
+
+.wrapper__bg,
+.wrapper__mask
+	position absolute
+	width 100%
+	height 100%
+	top 0
+	left 0
+
+.wrapper__bg
+	z-index 1
+	background-size cover
+	background-position center center
+
+.wrapper__mask
+	z-index 2
+	background fade-out(black, 60%)
+
+.wrapper__inner
+	position absolute
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)
+	z-index 3
+
+.spinner-area
+	width 100px
+	height 100px
+	// background #f00
+	border-radius 50%
+	position relative
+	animation bounce 0.5s infinite ease-out
+	overflow hidden
+
+.spinner-icon-list
+	position absolute
+	top 0
+	left -400px
+	list-style none
+	margin 0
+	padding 0
+	overflow hidden
+	width 500px
+	animation mv-list 6.5s infinite
+	> li
+		float left
+		text-align center
+		> i
+			display block
+			width 100px
+			height 100px
+			line-height 100px
+			color white
+			font-size 40px
+			animation icon-anim 1.3s infinite
+
+
+
+
+@keyframes bounce
+	0%
+		box-shadow 0 0 0 3px fade-out(white, 75%)
+	50%
+		box-shadow 0 0 0 10px fade-out(white, 75%)
+	100%
+		box-shadow 0 0 0 3px fade-out(white, 75%)
+
+@keyframes mv-list-t
+	from
+		left -400px
+	to
+		left -300px
+
+@keyframes mv-list
+	0%
+		left -400px
+		background #84BBE4
+	20%
+		left -300px
+		background #79BFA3
+	40%
+		left -200px
+		background #D7CD86
+	60%
+		left -100px
+		background #E6756F
+	80%
+		left 0
+		background #F3C868
+	100%
+		left -400px
+		background #84BBE4
+
+@keyframes icon-anim
+	0%
+		transform translate(0, 0)
+		opacity 1
+		font-size 45px
+	35%
+		transform translate(0, -5px)
+		opacity 0
+	50%
+		transform translate(0, 0)
+		// opacity 0
+		font-size 30px
+	65%
+		transform translate(0, 5px)
+		opacity 0
+	100%
+		transform translate(0, 0)
+		opacity 1
+		font-size 45px
+
+.load-title
+	margin-top 20px
+	text-shadow 0 2px 1px fade-out(black, 85%)
+	text-align center
+	color white
+	/*cant figure out why it force unexpected margin hardcore offset*/
+	position relative
+	left -38px
