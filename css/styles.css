@@ -170,51 +170,6 @@ html,
     box-shadow: 0 0 0 3px rgba(255,255,255,0.25);
   }
 }
-@-moz-keyframes mv-list-t {
-  0% {
-    left: -400px;
-  }
-
-  100% {
-    left: -300px;
-  }
-}
-@-webkit-keyframes mv-list-t {
-  0% {
-    left: -400px;
-  }
-
-  100% {
-    left: -300px;
-  }
-}
-@-o-keyframes mv-list-t {
-  0% {
-    left: -400px;
-  }
-
-  100% {
-    left: -300px;
-  }
-}
-@-ms-keyframes mv-list-t {
-  0% {
-    left: -400px;
-  }
-
-  100% {
-    left: -300px;
-  }
-}
-@keyframes mv-list-t {
-  0% {
-    left: -400px;
-  }
-
-  100% {
-    left: -300px;
-  }
-}
 @-moz-keyframes mv-list {
   0% {
     left: -400px;
